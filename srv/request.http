@@ -1,0 +1,115 @@
+###
+PUT  http://localhost:4004/odata/v4/catalog/localhost:4004/odata/v4/catalog/ProductsSrv
+Content-Type: application/json
+
+{
+    "Price" : "105000.00",
+    "Currency_code" : "USD"
+}
+
+###
+GET http://localhost:4004/odata/v4/catalog/AdressSrv
+###
+PUT http://localhost:4004/odata/v4/catalog/AdressSrv/74867AD200E41EDBA5D8B06885664052
+Content-Type: application/json
+
+{
+    "COUNTRY": "IN"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197A7FB
+Content-Type: application/json
+ 
+{
+    "phoneNumber": "+9442071234567"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog/BusinessPartnerSrv/74867AD200E41EDBA5D8B06885A56052
+Content-Type: application/json
+ 
+{
+    "COMPANY_NAME": "CAP"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog/PurchaseItemSrv/74867AD200E41EDBA5D8B06B26F60052
+Content-Type: application/json
+ 
+{
+    "PO_ITEMS_POS": "20"
+}
+
+###
+POST  http://localhost:4004/odata/v4/catalog/ProductsSrv
+
+###
+GET http://localhost:4004/odata/v4/catalog/EmployeeSrv
+
+
+###
+GET http://localhost:4004/odata/v4/catalog/ProductsSrv
+
+###
+POST http://localhost:4004/odata/v4/catalog/EmployeeSrv
+Content-Type: application/json
+{
+"Currency_code": null,
+  "ID": "7236a83b-dc3f-464b-8eec-021ecd35f375",
+  "accountNumber": null,
+  "bankId": null,
+  "bankName": null,
+  "email": null,
+  "gender": null,
+  "language": null,
+  "loginName": null,
+  "nameFirst": null,
+  "nameIntials": null,
+  "nameLast": null,
+  "nameMiddle": null,
+  "phoneNumber": null,
+  "salaryAmount": null
+}
+
+###
+GET http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19807FB/top20Employee
+ 
+###
+POST http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19807FB/IncreaseSal
+ 
+
+###
+GET http://localhost:4004/odata/v4/catalog/getUtilities()
+
+###
+http://localhost:4004/odata/v4/catalog/ProductsSrv?$top=10
+
+###
+http://localhost:4004/odata/v4/catalog/ProductsSrv?$top=10&$skip=10
+
+###
+http://localhost:4004/odata/v4/catalog/ProductsSrv?$filter=CATEGORY eq 'Notebooks'&DIM_UNIT eq 'OM
+
+###
+http://localhost:4004/odata/v4/catalog/ProductsSrv?$select=PRODUCT_ID,DESCRIPTION,CATEGORY,PRICE
+
+###
+http://localhost:4004/odata/v4/catalog/ProductsSrv?$orderby=PRODUCT_ID desc
+
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Categories?$select=CategoryName,Description
+
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,ContactName&$filter=City eq 'London'
+
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Suppliers?$filter=Fax ne null
+
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Orders?$select=CustomerID&$filter=RequiredDate ge 1997-01-01T00:00:00Z and RequiredDate lt 1998-01-01T00:00:00Z and Freight lt 100
+
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$select=CompanyName,ContactName&$filter=ContactTitle eq 'Owner' and (Country eq 'Mexico' or Country eq 'Sweden' or Country eq 'Germany')
+
+
