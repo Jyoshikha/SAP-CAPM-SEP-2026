@@ -2,7 +2,7 @@ namespace products.db;
  
 using{cuid, Currency} from '@sap/cds/common';
 using{products.common as c} from './common';
- 
+//this to chech how the changes are sync in git hub
 context master{
     entity BusinessPartners{
         key NODE_KEY:c.Guid;
